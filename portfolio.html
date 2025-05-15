@@ -737,5 +737,16 @@
     <script src="assets/js/popper.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const hash = window.location.hash;
+        if (hash) {
+            const targetSection = document.querySelector(hash);
+            if (targetSection) {
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+        });
+    </script>
 </body>
 </html>
